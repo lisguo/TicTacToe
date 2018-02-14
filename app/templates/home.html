@@ -3,6 +3,23 @@
 {% block content %}
     {% if name %}
     <h1>Welcome {{ name }}, {{ date }}</h1>
+    <table id='grid'>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
     {% else %}
     <h1>Sign In</h1>
     <form action="/ttt/" method="post">
