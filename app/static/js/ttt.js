@@ -16,6 +16,8 @@ $(document).ready(function() {
 		var jsonGame = JSON.stringify(game);
 		checkWinner(jsonGame);
 		processMove(jsonGame);
+
+		$(e.target).off('click');
 	});
 });
 
@@ -59,6 +61,7 @@ function checkWinner(json) {
 	var winner = state_obj.winner;
 
 	if(winner != ""){
-		alert(winner + " wins!");
+		$('#winner').text(winner + " wins!");
+		$('#grid td').off('click');
 	}
 }

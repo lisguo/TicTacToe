@@ -20,9 +20,10 @@
             <td></td>
         </tr>
     </table>
+    <p id='winner'></p>
     {% else %}
     <h1>Sign In</h1>
-    <form action="http://130.245.171.50/ttt/" method="post">
+    <form action="/ttt/" method="post">
         {{ form.hidden_tag() }}
         <p>
             {{ form.name.label }}<br>
