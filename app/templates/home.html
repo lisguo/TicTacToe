@@ -2,7 +2,7 @@
 
 {% block content %}
     {% if name %}
-    <h1>Welcome {{ name }}, {{ date }}</h1>
+    <h1>Hello {{ name }}, {{ date }}</h1>
     <table id='grid'>
         <tr>
             <td></td>
@@ -22,7 +22,7 @@
     </table>
     {% else %}
     <h1>Sign In</h1>
-    <form action="/ttt/" method="post">
+    <form action="http://130.245.171.50/ttt/" method="post">
         {{ form.hidden_tag() }}
         <p>
             {{ form.name.label }}<br>

@@ -7,19 +7,19 @@ import datetime, json
 @app.route('/ttt/', methods=['GET','POST'])
 def ttt():
 	form = LoginForm()
-	if form.validate_on_submit():
-			print("Logged in!")
-			name = form.name.data
-			now = datetime.datetime.now()
-			date_str = now.strftime("%Y-%m-%d %H:%M")
-			return render_template('home.html', title="Play", name=name, date=date_str)
+	if request.method == "POST":
+		print("Logged in!")
+		name = form.name.data
+		now = datetime.datetime.now()
+		date_str = now.strftime("%Y-%m-%d %H:%M")
+		return render_template('home.html', title="Play", name=name, date=date_str)
 	return render_template('home.html', title='Sign In', form=form)
 
 
 '''
 Functions below are for tic tac toe game play
 '''
-@app.route('/ttt/play/', methods=['POST', 'GET'])
+@app.route('/ttt/play/', methods=['POST', 'GET'], strict_slashes=False)
 def play():
 	req = request.get_json()
 	print("Request: ", req)

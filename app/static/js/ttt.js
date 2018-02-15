@@ -1,4 +1,4 @@
-var req_addr = "http://localhost:5000/ttt/play/";
+var req_addr = "http://130.245.171.50/ttt/play/";
 var xhr = new XMLHttpRequest();
 var winner = "";
 
